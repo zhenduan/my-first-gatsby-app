@@ -5,6 +5,7 @@
 
 .navLinks {
   list-style-type: none;
+  display: flex;
 }
 
 .navLinkItem {
