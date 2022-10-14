@@ -3,5 +3,5 @@ module.exports = {
     title: `my first gatsby app`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp"],
+};
