@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/Layout";
-import { SEO } from "../components/SEO";
+import Layout from "../../components/Layout";
+import { SEO } from "../../components/SEO";
 import { graphql, Link } from "gatsby";
 
 const blog = ({ data }) => {
@@ -8,7 +8,9 @@ const blog = ({ data }) => {
     <Layout title="Blog Page">
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
-          <h2>{node.frontmatter.title}</h2>
+          <Link to={`/blog/${node.frontmatter.slug}`}>
+            {node.frontmatter.title}
+          </Link>
           <p>Posted: {node.frontmatter.date}</p>
           <p>{node.excerpt}</p>
         </article>
@@ -24,6 +26,7 @@ export const query = graphql`
         frontmatter {
           title
           date(formatString: "MMMM DD, YYYY")
+          slug
         }
         id
         excerpt

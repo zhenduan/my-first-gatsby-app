@@ -17,7 +17,6 @@ const BlogTest = () => {
     }
   `);
 
-  console.log(data);
   return <div>BlogTest</div>;
 };
 
