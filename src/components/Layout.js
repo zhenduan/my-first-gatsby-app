@@ -1,13 +1,19 @@
 import React from "react";
+import { body, container } from "./Layout.module.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Layout({ title, children }) {
   return (
-    <>
-      <div>header</div>
-      <h1>{title}</h1>
-      <div>{children}</div>
-      <div>footer</div>
-    </>
+    <div className={body}>
+      <Header />
+      <div className={container}>
+        <h1>{title}</h1>
+        <div>{children}</div>
+      </div>
+
+      <Footer />
+    </div>
   );
 }
 
