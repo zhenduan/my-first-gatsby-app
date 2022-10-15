@@ -2,7 +2,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/Layout";
-import { SEO } from "../components/seo";
+import { SEO } from "../components/SEO";
 
 // Step 2: Define your component
 const Contact = () => {
@@ -34,23 +34,6 @@ export const Head = () => (
     }
   `}
     </script>
-    {/* <Script>
-      <script type="application/ld+json">
-        {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "https://www.spookytech.com",
-      "name": "Spooky technologies",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+5-601-785-8543",
-        "contactType": "Customer Support"
-      }
-    }
-  `}
-      </script>
-    </Script> */}
   </SEO>
 );
 
